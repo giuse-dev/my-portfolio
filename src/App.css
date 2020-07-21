@@ -1,38 +1,418 @@
-.App {
+:root{
+  --font1: 'Bitter', serif;
+  --font2: 'Domine', serif;
+  --fontHW: 'Lateef', cursive;
+  --fontHW2: 'Charm', cursive;
+  --fontHW3: 'Markazi Text', serif;
+
+  --blu-chiaro: #042642;
+  --blu-scuro: #021a2e;
+  --blu-scurissimo: rgb(1, 16, 29);
+
+  --grigio-chiaro: rgb(232, 230, 227);
+  --grigio-scuro: rgb(217, 213, 206);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root{
+  height: 100%;
+}
+
+.App{
+  position: relative;
+  min-height: 100%;
+  
+  background: rgb(235, 235, 235);
+  background: #01121F;
+  background: var(--blu-scuro);
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.fixed-comp{
+  position: fixed;
+  margin-top: -69px;
+
+  width: 48.5px;
+
+  left: 0;
+  top: 50%;
+  bottom: 50%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.fixed-comp div{
+  border-top: 2px solid greenyellow ;
+  border-right: 2px solid greenyellow ;
+
+  cursor: pointer;
+}
+
+.fixed-comp img{
+  display: block;
+}
+
+.fixed-comp div:hover{
+  transform: scale(1.05)
+}
+
+.cv-box{
+  border-bottom: 2px solid greenyellow ;
+}
+
+/* top component */
+
+.top-comp {
+  background: var(--blu-scurissimo);
+  border-bottom: 2px solid black;
+}
+
+.top-comp h1{
+  color: var(--grigio-chiaro);
+  
+  font-family: var(--fontHW);
+  font-size: 3em;
+  letter-spacing: 0.06em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* fine top component */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* middle component */
+
+.middle-comp{
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
+}
+
+.middle-comp h1{
+  margin-top: 0.7em;
+  margin-left: 5%;
+
+  color: var(--grigio-scuro);
+
+  font-family: var(--fontHW3);
+  font-size: 2.3em;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+
+  align-self: flex-start;
+}
+
+.bio-div{
+  margin-top: 0.4em;
+  margin-bottom: 1.3em;
+  padding: 0.8em;
+
+  width: 90%;
+
+  background: var(--blu-chiaro);
+  border-radius: 0.3em;
+  border: 1px solid yellowgreen;
+}
+
+.bio-div p{
+  color: var(--grigio-chiaro);
+
+  font-family: var(--font1);
+  font-size: 1.05em;
+  letter-spacing: 0.045em;
+  line-height: 1.3em;
+}
+
+.seconda-parte-bio{
+  margin-top: 0.4em;
+}
+
+.middle-comp h2{
+  margin-top: 0.2em;
+  color: var(--grigio-scuro);
+  
+  font-family: var(--fontHW2);
+
+  font-size: 2.03em;
+  letter-spacing: 0.07em;
+}
+
+.middle-comp h3{
+  
+  color: var(--grigio-chiaro);
+
+  font-family: var(--fontHW);
+  font-style: italic;
+  font-size: 1.85em;
+  letter-spacing: 0.08em;
+}
+
+.middle-projects-div{
+  margin-top: 0.2em;
+  margin-bottom: 1.5em;
+  padding: 1em 1.3em;
+
+  width: 78%;
+
+  background: var(--blu-chiaro);
+  border-radius: 0.3em;
+  border: 2px solid yellowgreen;
+
+  display: flex;
+  flex-direction: column;
+}
+/* fine middle component */
+.project-div{
+
+  margin-top: 1.3em;
+  margin-bottom: 3em;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+}
+
+.project-div img{
+  width: 500px;
+  height: auto;
+} 
+
+.right-div{
+  position: relative;
+  top: -0.8em;
+
+  margin-left: 0.1em;
+  padding: 0.3em;
+}
+
+.proj-title{
+  text-align: center;
+}
+
+.techs-used-div{
+  display: flex;
+  flex-wrap: wrap;
+
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.box-tech-div{
+  margin-top: 0.25em;
+  margin-right: 0.6em;
+  padding: 0.2em 0.7em;
+
+  background: greenyellow;
+
+  font-family: var(--font2);
+  font-size: 0.84em;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  border-radius: 2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.description-div{
+  margin-top: 1.2em;
+  margin-bottom: 1.1em;
+  
+  color: var(--grigio-chiaro);
+}
+
+.description-div p{
+
+  height: 100px;
+  font-family: var(--font1);
+  /* font-size: 0.8em; */
+  font-size: 1.01em;
+  text-align: center;
+  letter-spacing: 0.03em;
+  line-height: 1.35em;
+  
+
+  overflow-y: auto;
+}
+
+.proj-links{
+  margin-top: 1em;
+  text-align: center;
+}
+
+.proj-links a{
+  margin-left: 0.7em;
+  margin-right: 0.7em;
+
+  padding: 0.27em 1em;
+
+  background: #f5d108;
+  color: black;
+  border-radius: 1em;
+
+  font-family: var(--font1);
+  font-size: 0.9em;
+  font-weight: bold;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+}
+
+.proj-links a:hover{
+  
+  padding: 0.26em 0.9em;
+
+  background: var(--blu-chiaro);
+  color: #f5d108;
+  
+  border: 2px solid #f5d108;
+  
+}
+
+/* fine project div */
+
+/* bottom component */
+
+.bottom-comp {
+  margin-top: auto;
+
+  padding-top: 1.9em;
+  padding-bottom: 1.6em;
+
+  background: var(--blu-scurissimo);
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.bottom-comp p{
+
+  margin-top: 0.2em;
+
+  padding-right: 0.7em;
+  padding-left: 0.7em;
+
+  color: var(--grigio-chiaro);
+  font-size: 0.95em;
+  letter-spacing: 0.03em;
+}
+
+/* bottom component */
+
+@media screen and (max-width: 1302px){
+  .middle-projects-div{
+    width: 84%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 1030px){
+  .middle-comp h1{
+    margin-left: 8%;
+  }
+  
+  .bio-div{
+    width: 84%;
+  }
+
+  .middle-comp h1{
+    margin-left: 7%;
+  }
+
+  .proj-links{
+    margin-top: 0.5em;
+  }
+}
+
+@media screen and (max-width: 928px){
+  .middle-comp h1{
+    margin-left: 9%;
+  }
+  
+  .bio-div{
+    width: 82%;
+  }
+  
+  .middle-projects-div{
+    width: 82%;
+  }
+  
+  .project-div{
+    padding-bottom: 2em;
+    border-bottom: 2px solid black;
+    grid-template-columns: 1fr;
+  }
+
+  .left-div img{
+    margin: auto;
+    margin-bottom: 0.7em;
+    display: block;
+    
+  }
+
+  .description-div{
+    margin-bottom: 0;
+  }
+
+}
+
+@media screen and (max-width: 660px){
+
+  .fixed-comp{
+    margin-top: -57px;
+    width: 40px;
+  }
+
+  .fixed-comp img{
+    width: 100%;
+    height: auto;
+  }
+
+  .left-div img{
+    width: 100%;
+  }
+
+  .proj-links{
+    margin-top: 1em;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .middle-comp h1{
+    margin-left: 10%;
+  }
+  
+  .bio-div{
+    width: 80%;
+  }
+  
+  .proj-links{
+    margin-top: 1.5em;
+  }
+  .fixed-comp{
+    margin-top: -46px;
+    width: 32px;
+  }
+  .middle-projects-div{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 360px){
+  .middle-comp h1{
+    margin-left: 11%;
+  }
+  
+  .bio-div{
+    width: 78%;
+  }
+
+  .middle-projects-div{
+    width: 78%;
   }
 }

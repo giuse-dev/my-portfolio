@@ -19,15 +19,6 @@ const pizzeriaCodeLink = "https://github.com/giuse-dev/pizzeria"
 const agendaCodeLink = "https://github.com/giuse-dev/react-agenda-app"
 const trisCodeLink = "https://github.com/giuse-dev/tris-game"
 
-// const ProjectsData = {
-//   imgs : [pizzeria1, agenda1, tris1],
-//   names : ["pizzeria", "agenda", "tris"],
-//   techListsNames : [ techs1, techs2, techs1 ],
-//   descriptions : [pizzeriaDescr, agendaDescr, trisDescr],
-//   projectsLink : [pizzeriaLink, agendaLink, trisLink],
-//   ghCodesLink : [pizzeriaCodeLink, agendaCodeLink, trisCodeLink],
-// }
-
 const projectsData =[
   {id: 1, img: pizzeria1, name:"Pizzeria site", techListNames: techs1,
     description: pizzeriaDescr, projectLink: pizzeriaLink, ghCodeLink: pizzeriaCodeLink},

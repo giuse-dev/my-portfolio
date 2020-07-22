@@ -5,8 +5,9 @@
   --fontHW2: 'Charm', cursive;
   --fontHW3: 'Markazi Text', serif;
 
-  --blu-chiaro: #042642;
-  --blu-scuro: #021a2e;
+  --blu-chiaro: rgb(4, 38, 66);
+
+  --blu-scuro: rgb(2, 26, 46);
   --blu-scurissimo: rgb(1, 16, 29);
 
   --grigio-chiaro: rgb(232, 230, 227);
@@ -30,67 +31,79 @@ html, body, #root{
   background: rgb(235, 235, 235);
   background: #01121F;
   background: var(--blu-scuro);
+  background: rgb(122, 108, 93);
+  background: rgb(124, 88, 49);
+  background: rgb(212, 230, 206);
+  
+  background: var(--blu-scuro);
+  /* background: white; */
+  /* background: var(--grigio-scuro); */
 
   display: flex;
   flex-direction: column;
 }
 
+.lateral-comp{
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+
+  width: 71px;
+  height: 100vh;
+
+  background: var(--blu-chiaro);
+  
+}
 
 .fixed-comp{
   position: fixed;
-  margin-top: -69px;
+  margin-top: -122px;
 
-  width: 48.5px;
+  width: 56px;
 
-  left: 0;
+  height: 245px;
+
+  left: 8px;
   top: 50%;
   bottom: 50%;
 
   display: flex;
   flex-direction: column;
+
+  justify-content: space-between;
+  z-index: 1;
 }
 
 .fixed-comp div{
-  border-top: 2px solid greenyellow ;
-  border-right: 2px solid greenyellow ;
+  border: 2px solid greenyellow ;
+  
+
+  border-radius: 50%;
 
   cursor: pointer;
 }
 
 .fixed-comp img{
+  
+  width: 100%;
+  height: auto;
+  
   display: block;
+  border-radius: 50%;
 }
 
 .fixed-comp div:hover{
   transform: scale(1.05)
 }
 
-.cv-box{
-  border-bottom: 2px solid greenyellow ;
-}
-
-/* top component */
-
-.top-comp {
-  background: var(--blu-scurissimo);
-  border-bottom: 2px solid black;
-}
-
-.top-comp h1{
-  color: var(--grigio-chiaro);
-  
-  font-family: var(--fontHW);
-  font-size: 3em;
-  letter-spacing: 0.06em;
-  text-align: center;
-}
-
-/* fine top component */
-
 
 /* middle component */
 
 .middle-comp{
+
+  margin-left: 25px;
 
   display: flex;
   flex-direction: column;
@@ -99,47 +112,86 @@ html, body, #root{
 }
 
 .middle-comp h1{
-  margin-top: 0.7em;
-  margin-left: 5%;
+  margin-top: 0.4em;
+  margin-bottom: 0.3em;
 
   color: var(--grigio-scuro);
+  
 
   font-family: var(--fontHW3);
-  font-size: 2.3em;
+  font-size: 2em;
   font-weight: 400;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
 
-  align-self: flex-start;
 }
 
 .bio-div{
-  margin-top: 0.4em;
-  margin-bottom: 1.3em;
-  padding: 0.8em;
+  margin-bottom: 1.5em;
+  width: 70%;
 
-  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+}
 
-  background: var(--blu-chiaro);
-  border-radius: 0.3em;
+.img-div{
+  margin-left: auto;
+}
+
+.img-div img{
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  border-bottom-left-radius: 0.44em;
+  border-top-left-radius: 0.4em;
   border: 1px solid yellowgreen;
+  border-right: none;
+   
+}
+
+.p-div{
+  margin-right: auto;
+  padding-top: 0.4em;
+  padding-left: 0.35em;
+
+  max-width: 320px;
+  width: 100%;
+
+  background: var(--blu-scuro);
+  background: var(--blu-scurissimo);
+  background: white;
+  background: var(--blu-chiaro);
+  
+  border-bottom-right-radius: 0.4em;
+  border-top-right-radius: 0.4em;
+  border: 1px solid yellowgreen;
+  border-left: none;
+  
 }
 
 .bio-div p{
+
+  max-height: 300px;
+
   color: var(--grigio-chiaro);
 
-  font-family: var(--font1);
-  font-size: 1.05em;
-  letter-spacing: 0.045em;
-  line-height: 1.3em;
+  font-family: var(--font2);
+  font-size: 1.08em;
+  letter-spacing: 0.03em;
+  line-height: 1.25em;
 }
 
 .seconda-parte-bio{
-  margin-top: 0.4em;
+  margin-top: 0.3em;
 }
+
 
 .middle-comp h2{
   margin-top: 0.2em;
   color: var(--grigio-scuro);
+  /* color: var(--blu-scurissimo); */
   
   font-family: var(--fontHW2);
 
@@ -150,6 +202,7 @@ html, body, #root{
 .middle-comp h3{
   
   color: var(--grigio-chiaro);
+
 
   font-family: var(--fontHW);
   font-style: italic;
@@ -165,8 +218,11 @@ html, body, #root{
   width: 78%;
 
   background: var(--blu-chiaro);
+  
   border-radius: 0.3em;
+  
   border: 2px solid yellowgreen;
+  border: 2px solid greenyellow;
 
   display: flex;
   flex-direction: column;
@@ -223,22 +279,20 @@ html, body, #root{
 .description-div{
   margin-top: 1.2em;
   margin-bottom: 1.1em;
-  
-  color: var(--grigio-chiaro);
 }
 
 .description-div p{
 
-  height: 100px;
+  min-height: 100px;
+
+  color: var(--grigio-chiaro);
+
   font-family: var(--font1);
-  /* font-size: 0.8em; */
   font-size: 1.01em;
-  text-align: center;
   letter-spacing: 0.03em;
   line-height: 1.35em;
-  
 
-  overflow-y: auto;
+  text-align: center;
 }
 
 .proj-links{
@@ -270,6 +324,7 @@ html, body, #root{
   background: var(--blu-chiaro);
   color: #f5d108;
   
+  
   border: 2px solid #f5d108;
   
 }
@@ -289,6 +344,8 @@ html, body, #root{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+
+  z-index: 1;
 }
 
 .bottom-comp p{
@@ -305,6 +362,19 @@ html, body, #root{
 
 /* bottom component */
 
+@media screen and (max-width: 720px){
+  .lateral-comp{
+    width: 61px;
+  }
+
+  .fixed-comp{
+    width: 46px;
+  }
+
+  .middle-comp{
+    margin-left: 20px;
+  }
+}
 @media screen and (max-width: 1302px){
   .middle-projects-div{
     width: 84%;
@@ -312,16 +382,8 @@ html, body, #root{
 }
 
 @media screen and (max-width: 1030px){
-  .middle-comp h1{
-    margin-left: 8%;
-  }
-  
   .bio-div{
     width: 84%;
-  }
-
-  .middle-comp h1{
-    margin-left: 7%;
   }
 
   .proj-links{
@@ -330,10 +392,6 @@ html, body, #root{
 }
 
 @media screen and (max-width: 928px){
-  .middle-comp h1{
-    margin-left: 9%;
-  }
-  
   .bio-div{
     width: 82%;
   }
@@ -348,11 +406,15 @@ html, body, #root{
     grid-template-columns: 1fr;
   }
 
+  .project-div:last-child{
+    border-bottom: none;
+  }
+
   .left-div img{
     margin: auto;
     margin-bottom: 0.7em;
+
     display: block;
-    
   }
 
   .description-div{
@@ -361,16 +423,50 @@ html, body, #root{
 
 }
 
-@media screen and (max-width: 660px){
-
-  .fixed-comp{
-    margin-top: -57px;
-    width: 40px;
+@media screen and (max-width: 834px){
+  .bio-div{
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
-  .fixed-comp img{
-    width: 100%;
-    height: auto;
+  .bio-div p{
+    max-height: 310px;
+    padding: 0.2em;
+    font-size: 1em;    
+  }
+
+  .img-div{
+    margin: auto;
+  }
+  
+  .img-div img{
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.4em;
+    border: 1px solid yellowgreen;
+    border-bottom: none;
+  }
+
+  .p-div{
+    margin: auto;
+    max-width: 300px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.4em;
+    border: 1px solid yellowgreen;
+    border-top: none;
+  }
+
+}
+
+@media screen and (max-width: 660px){
+
+
+  .lateral-comp{
+    width: 54px;
+  }
+
+  .fixed-comp{
+    /* margin-top: -57px; */
+    width: 40px;
   }
 
   .left-div img{
@@ -383,19 +479,24 @@ html, body, #root{
 }
 
 @media screen and (max-width: 500px){
-  .middle-comp h1{
-    margin-left: 10%;
-  }
-  
   .bio-div{
     width: 80%;
+  }
+
+  .middle-comp h1{
+    font-size: 1.95em;
   }
   
   .proj-links{
     margin-top: 1.5em;
   }
+
+  .lateral-comp{
+    width: 46px;
+  }
+
   .fixed-comp{
-    margin-top: -46px;
+    /* margin-top: -46px; */
     width: 32px;
   }
   .middle-projects-div{
@@ -404,15 +505,37 @@ html, body, #root{
 }
 
 @media screen and (max-width: 360px){
-  .middle-comp h1{
-    margin-left: 11%;
-  }
-  
   .bio-div{
     width: 78%;
   }
 
+  .bio-div p{
+    max-height: 325px;
+  }
+
+  .p-div p{
+    font-size: 1em;
+  }
+
+  .middle-comp h1{
+    font-size: 1.9em;
+  }
+
   .middle-projects-div{
     width: 78%;
+  }
+}
+
+@media screen and (max-height: 550px){
+  .fixed-comp{
+    margin-top: -105px;
+    height: 210px;
+  }
+}
+
+@media screen and (max-height: 300px){
+  .fixed-comp{
+    margin-top: -90px;
+    height: 180px;
   }
 }

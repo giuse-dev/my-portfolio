@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
 
-import TopComponent from "./components/TopComponent"
 import BottomComponent from "./components/BottomComponent"
 import MiddleComponent from "./components/MiddleComponent"
 import FixedComponent from "./components/FixedComponent"
+import LateralComponent from "./components/LateralComponent"
+
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <FixedComponent />
-      <TopComponent />
+      <LateralComponent />
       <MiddleComponent />
       <BottomComponent />
     </div>

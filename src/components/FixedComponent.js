@@ -14,7 +14,7 @@ function FixedComponent(){
         <a href="mailto:giuse.developing@gmail.com" target="_blank"><img src={logoMail} alt=""/></a>
       </div>
       <div className="cv-box">
-        <a href="https://drive.google.com/file/d/1bbmRMkja9_yByfEua5EN7c5sh6pdmVUW/view?usp=sharing" target="_blank"><img src={logoCv} alt=""/></a>
+        <a href="https://drive.google.com/file/d/1_EjEKmMh4UCqFt6zz9E3D7xklcH5KOhq/view?usp=sharing" target="_blank"><img src={logoCv} alt=""/></a>
       </div>
     </div>
   )
